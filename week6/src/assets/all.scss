@@ -1,0 +1,11 @@
+@import "bootstrap/scss/functions";
+
+@import "bootstrap/scss/variables";
+
+@import "bootstrap/scss/bootstrap";
+
+//主要更改 variables ， 但一定要透過 function ，所以需要載入 function
+
+a {
+    color:rgb(16, 78, 58)
+}
