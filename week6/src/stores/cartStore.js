@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import productsStore from "./productsStore.js";
+import axios from "axios";
 
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env;
 export default defineStore("cart", {
@@ -8,11 +9,9 @@ export default defineStore("cart", {
   }),
   actions: {
     getCart() {
-      this.$http
-        .get(`${VITE_APP_URL}/v2/api/${VITE_APP_PATH}/cart`)
-        .then((res) => {
-          console.log(res);
-        });
+      axios.get(`${VITE_APP_URL}/v2/api/${VITE_APP_PATH}/cart`).then((res) => {
+        console.log(res);
+      });
     },
   },
   getters: {

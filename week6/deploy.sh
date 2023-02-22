@@ -24,6 +24,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:albee-chang/albee-chang.github.io.git main
 
 # if you are deploying to https://albee-chang.github.io/<REPO>
-git push -f git@github.com:albee-chang/vue3-training/tree/main/week6.git main:gh-pages
+git push -f git@github.com:albee-chang/vue3-training.git main:gh-pages
 
 cd -

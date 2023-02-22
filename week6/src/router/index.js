@@ -35,6 +35,14 @@ const router = createRouter({
           path: "login",
           component: () => import("../views/front/LoginView.vue"),
         },
+        {
+          path: "user-articles",
+          component: () => import("../views/front/ArticlesView.vue"),
+        },
+        {
+          path: "user-article/:id",
+          component: () => import("../views/front/ArticleView.vue"),
+        },
       ],
     },
     {
@@ -48,6 +56,10 @@ const router = createRouter({
         {
           path: "products",
           component: () => import("../views/admin/AdminProducts.vue"),
+        },
+        {
+          path: "articles",
+          component: () => import("../views/admin/AdminArticle.vue"),
         },
       ],
     },

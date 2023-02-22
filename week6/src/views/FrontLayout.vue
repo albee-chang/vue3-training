@@ -14,6 +14,10 @@
       >所有產品</RouterLink
     >
     |
+    <RouterLink to="/user-articles" class="text-decoration-none fs-5 fw-bold"
+      >所有文章列表</RouterLink
+    >
+    |
     <RouterLink to="/cart" class="text-decoration-none fs-5 fw-bold"
       >檢視購物車</RouterLink
     >
@@ -29,7 +33,8 @@
 
 <script>
 import { RouterView } from "vue-router";
+// import NavbarComponent from "../components/NavbarComponent.vue";
 export default {
-  components: [RouterView],
+  components: { RouterView },
 };
 </script>

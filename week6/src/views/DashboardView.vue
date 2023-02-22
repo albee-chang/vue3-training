@@ -9,6 +9,9 @@
     <RouterLink to="/admin/orders" class="text-decoration-none fs-5 fw-bold"
       >後臺訂單列表</RouterLink
     >|
+    <RouterLink to="/admin/articles" class="text-decoration-none fs-5 fw-bold"
+      >後臺文章管理列表</RouterLink
+    >|
     <RouterLink to="/" class="text-decoration-none fs-5 fw-bold"
       >回到前台首頁</RouterLink
     >
@@ -22,7 +25,6 @@
 </template>
 
 <script>
-import Swal from "sweetalert2";
 import { RouterView } from "vue-router";
 const { VITE_APP_URL } = import.meta.env;
 export default {
@@ -43,7 +45,7 @@ export default {
       const url = `${VITE_APP_URL}/api/user/check`;
       this.$http.post(url).then((res) => {
         if (!res.data.success) {
-          this.$router.push("/login");
+          this.$router.push("/");
         }
       });
     },

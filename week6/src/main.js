@@ -20,11 +20,14 @@ import "sweetalert2/dist/sweetalert2.min.css";
 import NavbarComponent from "./components/NavbarComponent.vue";
 import CartComponent from "./components/CartComponent.vue";
 import ProductsComponent from "./components/ProductsComponent.vue";
+
 //Loading 套件
 import Loading from "vue-loading-overlay";
 import { LoadingPlugin } from "vue-loading-overlay";
 import "vue-loading-overlay/dist/css/index.css";
 
+//載入CKEditor套件
+import CKEditor from "@ckeditor/ckeditor5-vue";
 //匯入全部規則
 Object.keys(AllRules).forEach((rule) => {
   defineRule(rule, AllRules[rule]);
@@ -54,5 +57,6 @@ app.use(LoadingPlugin, {
   color: "#FF0000",
 });
 app.use(VueSweetalert2);
+app.use(CKEditor);
 
 app.mount("#app");
